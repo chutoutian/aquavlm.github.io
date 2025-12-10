@@ -6,7 +6,7 @@
         content="AquaScope: Reliable Underwater Image Transmission on Mobile Devices.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AquaScope: Reliable Underwater Image Transmission on Mobile Devices</title>
+  <title>AquaVLM: Improving Underwater Situation Awareness with Mobile Vision Language Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -63,8 +63,8 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://github.com/underwater-uiuc/AquaVLM">
-            AquaVLM
+          <a class="navbar-item" href="https://chutoutian.github.io/aquascope.github.io/">
+            AquaScope
           </a>
         </div>
       </div>
@@ -79,7 +79,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AquaScope: Reliable Underwater Image Transmission on Mobile Devices</h1>
+          <h1 class="title is-1 publication-title">AquaVLM: Improving Underwater Situation Awareness with Mobile Vision Language Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.beitongtian.com/">Beitong Tian</a><sup>*</sup>,</span>
@@ -89,16 +89,16 @@
               <a href="https://bochen.info/">Bo Chen</a><sup></sup>,
             </span>
             <span class="author-block">
-              <a href="https://mingyuan1997.github.io/">Mingyuan Wu</a><sup></sup>,
-            </span>
-            <span class="author-block">
               <a href="">Haozhen Zheng</a><sup></sup>,
             </span>
             <span class="author-block">
-              <a href="https://deepakv.web.illinois.edu/">Deepak Vasisht</a><sup></sup>,
+              <a href="https://jingcheng.me/">Jingcheng Yang</a><sup></sup>,
             </span>
             <span class="author-block">
-              <a href="https://fyy.cs.illinois.edu/">Francis Y. Yan</a><sup></sup>
+              <a href="https://mingyuan1997.github.io/">Mingyuan Wu</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://deepakv.web.illinois.edu/">Deepak Vasisht</a><sup></sup>,
             </span>
               <span class="author-block">
               <a href="https://monet.cs.illinois.edu/people/klara/">Klara Nahrstedt</a><sup></sup>
@@ -114,7 +114,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2502.10891"
+                <a href="https://arxiv.org/abs/2510.21722"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -123,7 +123,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2502.10891"
+                <a href="https://arxiv.org/abs/2510.21722"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -133,7 +133,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/chutoutian/AquaScope"
+                <a href="https://github.com/underwater-uiuc/AquaVLM"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -143,7 +143,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://drive.google.com/file/d/1zg30JxvskZU5_nYn1bSiV0O40uyTQa9b/view"
+                <a href="https://drive.google.com/drive/u/3/folders/16Vg5WqB1uViH2m_2Lx3VoU5_eZO_LtZ8"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -188,35 +188,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Underwater communication is essential for both recreational and scientific activities, such as scuba diving. However, existing methods remain highly constrained by environmental challenges and often require specialized hardware, driving research into more accessible underwater communication solutions. While recent acoustic-based communication systems support text messaging on mobile devices, their low data rates severely limit broader applications.
+            Underwater activities like scuba diving enable millions annually to explore marine environments for recreation and scientific research. Maintaining situational awareness and effective communication are essential for diver safety. Traditional underwater communication systems are often bulky and expensive, limiting their accessibility to divers of all levels. While recent systems leverage lightweight smartphones and support text messaging, the messages are predefined and thus restrict context-specific communication.
           </p>
           <p>
-            We present AquaScope, the first acoustic communication system capable of underwater image transmission on commodity mobile devices. To address the key challenges of underwater environments -- limited bandwidth and high transmission errors -- AquaScope employs and enhances generative image compression to improve compression efficiency, and integrates it with reliability-enhancement techniques at the physical layer to strengthen error resilience. We implemented AquaScope on the Android platform and demonstrated its feasibility for underwater image transmission. Experimental results show that AquaScope enables reliable, low-latency image transmission while preserving perceptual image quality, across various bandwidth-constrained and error-prone underwater conditions.
+            In this project, we present AquaVLM, a tap-and-send underwater communication system that automatically generates context-aware messages and transmits them using ubiquitous smartphones. Our system features a mobile vision-language model (VLM) fine-tuned on an auto-generated underwater conversation dataset and employs a hierarchical message generation pipeline. We co-design the VLM and transmission, incorporating error-resilient fine-tuning to improve the system's robustness to transmission errors. We develop a VR simulator to enable users to experience AquaVLM in a realistic underwater environment and create a fully functional prototype on the iOS platform for real-world experiments. Both subjective and objective evaluations validate the effectiveness of AquaVLM and highlight its potential for personal underwater communication as well as broader mobile VLM applications.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper demo. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Demo</h2>
-        <div class="publication-video">
-          <video id="teaser"
-       controls
-       autoplay
-       muted
-       loop
-       playsinline
-       height="100%">
-      <source src="./static/videos/demo.mp4" type="video/mp4">
-    </video>
-      </video>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper demo. -->
+
   </div>
 
 </section>
@@ -225,392 +207,103 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <h2 class="title is-3">End-to-end Performance</h2>
+    <h2 class="title is-3">Illustration</h2>
         <div class="content has-text-justified">
           <p>
-            AquaScope achieves 36.7%~40% performance gains in LPIPS compared to the existing systems.
+      Alice mounts her mobile phone on her arm, captures an image of the shark, and selects the "SOS" purpose on the user interface. 
+      The mobile phone forms a prompt using <strong> multimodal data: the image, recent sensor data (e.g., compass orientation and depth), and her SOS purpose</strong>. The mobile VLM generates two message candidates.  Alice selects a message to send.
+      </p>
+          <p> 
+      The message is modulated into an acoustic signal by the signal processing module and transmitted via the phone’s speaker. At the receiving end, the acoustic signal is demodulated and converted back into a human-readable message. In case of errors (e.g., altered characters), the mobile VLM attempts to <strong> recover the original message </strong>. The received message is displayed on Bob’s phone screen, and two reply candidates are generated based on his selected purpose.
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/images/results.png" class="performance-image">
+          <img class="system-overview-image" src="./static/images/workflow.png">
         </div>
+        <h2 class="title is-3">Model Instruction Tuning Pipeline</h2>
+        <div class="content has-text-justified">
+          <p>
+            The instruction tuning pipeline consists of four stages: (a) We self-collect images from five scuba diving videos and use nine types of critical sensor data typically available on
+mobile devices or diving watches. (b) We generate underwater conversation using commercial VLMs, ChatGPT-4o, leveraging self-collected multimodal data and carefully designed prompts. (c) We identify three tasks for intruction tuning: <strong>sender message generation, reply generation, and message recovery </strong>. (d) We fine-tune the MobileVLM2 using LoRA.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img class="tuning-pipeline-image" src="./static/images/tuning.png">
+        </div>
+
+
+                <!-- Interpolating. -->
+        <h2 class="title is-3">VR-based Simulation</h2>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate the effectiveness of AquaVLM, we design and build a virtual reality (VR)-based simulation platform that enables users to wear a headset to explore an underwater world, experience various events, and communicate with virtual divers using AquaVLM at any point during the simulation.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel is-variable is-2">
+          <div class="column is-one-third has-text-centered">
+            <img src="./static/images/vr1.webp"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Testbed</p>
+          </div>
+            <div class="column is-one-third has-text-centered">
+            <img src="./static/images/vr2.webp"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Different events</p>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <img src="./static/images/vr3.webp"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">Snapshot</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+        <!-- Interpolating. -->
+        <h2 class="title is-3">Prototype</h2>
+        <div class="content has-text-justified">
+          <p>
+            We developed a prototype using an iPhone 12 Pro and Apple Watch Ultra and conducted tests in a lake with a maximum range of 20m and an averagedepth of 3m.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel is-variable is-2">
+          <div class="column is-half has-text-centered">
+            <img src="./static/images/ios_watch_prototype.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>iOS prototype</p>
+          </div>
+            <div class="column is-half has-text-centered">
+            <img src="./static/images/environment.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Test environment</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
   </div>
 </section>
 
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Visual Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
 
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_optimal.png"
-                  class="interpolation-image"
-                  alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_disturbed_6.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_disturbed_5.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-      <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_disturbed_6.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-      <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{tian2025aquascopereliableunderwaterimage,
-  author={Beitong Tian and Lingzhi Zhao and Bo Chen and Mingyuan Wu and Haozhen Zheng and Deepak Vasisht and Francis Y. Yan and Klara Nahrstedt},
-  title={AquaScope: Reliable Underwater Image Transmission on Mobile Devices},
-  eprint={2502.10891},
-  archivePrefix={arXiv},
-  year= {2025},
+    <pre><code>@misc{tian2025aquavlmimprovingunderwatersituation,
+      title={AquaVLM: Improving Underwater Situation Awareness with Mobile Vision Language Models}, 
+      author={Beitong Tian and Lingzhi Zhao and Bo Chen and Haozhen Zheng and Jingcheng Yang and Mingyuan Wu and Deepak Vasisht and Klara Nahrstedt},
+      year={2025},
+      eprint={2510.21722},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC},
+      url={https://arxiv.org/abs/2510.21722}, 
 }</code></pre>
   </div>
 </section>

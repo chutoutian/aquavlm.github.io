@@ -110,12 +110,28 @@ body {
 .publication-body img {
 }
 
+.system-overview-image {
+  max-width: 70%;
+  height: auto;
+}
+
+.tuning-pipeline-image {
+  max-width: 95%;
+  height: auto;
+}
 
 
 
 .interpolation-panel {
   background: #f5f5f5;
   border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.interpolation-panel .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .interpolation-panel .interpolation-image {
