@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AquaScope: Reliable Underwater Image Transmission on Mobile Devices.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AquaScope: Reliable Underwater Image Transmission on Mobile Devices</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/diving-mask.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/underwater-uiuc/AquaVLM">
+            AquaVLM
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">AquaScope: Reliable Underwater Image Transmission on Mobile Devices</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.beitongtian.com/">Beitong Tian</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://chutoutian.github.io/">Lingzhi Zhao</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://bochen.info/">Bo Chen</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://mingyuan1997.github.io/">Mingyuan Wu</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Haozhen Zheng</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://deepakv.web.illinois.edu/">Deepak Vasisht</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://fyy.cs.illinois.edu/">Francis Y. Yan</a><sup></sup>
+            </span>
+              <span class="author-block">
+              <a href="https://monet.cs.illinois.edu/people/klara/">Klara Nahrstedt</a><sup></sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup></sup>University of Illinois Urbana-Champaign,</span>
+          <span class="author-block"><sup>*</sup>Equal Contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.10891"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.10891"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/chutoutian/AquaScope"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1zg30JxvskZU5_nYn1bSiV0O40uyTQa9b/view"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Underwater communication is essential for both recreational and scientific activities, such as scuba diving. However, existing methods remain highly constrained by environmental challenges and often require specialized hardware, driving research into more accessible underwater communication solutions. While recent acoustic-based communication systems support text messaging on mobile devices, their low data rates severely limit broader applications.
+          </p>
+          <p>
+            We present AquaScope, the first acoustic communication system capable of underwater image transmission on commodity mobile devices. To address the key challenges of underwater environments -- limited bandwidth and high transmission errors -- AquaScope employs and enhances generative image compression to improve compression efficiency, and integrates it with reliability-enhancement techniques at the physical layer to strengthen error resilience. We implemented AquaScope on the Android platform and demonstrated its feasibility for underwater image transmission. Experimental results show that AquaScope enables reliable, low-latency image transmission while preserving perceptual image quality, across various bandwidth-constrained and error-prone underwater conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper demo. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Demo</h2>
+        <div class="publication-video">
+          <video id="teaser"
+       controls
+       autoplay
+       muted
+       loop
+       playsinline
+       height="100%">
+      <source src="./static/videos/demo.mp4" type="video/mp4">
+    </video>
+      </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper demo. -->
+  </div>
+
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">End-to-end Performance</h2>
+        <div class="content has-text-justified">
+          <p>
+            AquaScope achieves 36.7%~40% performance gains in LPIPS compared to the existing systems.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/results.png" class="performance-image">
+        </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Visual Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_optimal.png"
+                  class="interpolation-image"
+                  alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_disturbed_6.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_disturbed_5.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+      <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_disturbed_6.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+      <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{tian2025aquascopereliableunderwaterimage,
+  author={Beitong Tian and Lingzhi Zhao and Bo Chen and Mingyuan Wu and Haozhen Zheng and Deepak Vasisht and Francis Y. Yan and Klara Nahrstedt},
+  title={AquaScope: Reliable Underwater Image Transmission on Mobile Devices},
+  eprint={2502.10891},
+  archivePrefix={arXiv},
+  year= {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            
+            This page was built using the <a
+              href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>
+             which was adopted from the <a
+              href="https://nerfies.github.io/">Nerfies</a> project page. You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
